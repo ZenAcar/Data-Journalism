@@ -1,5 +1,7 @@
 # D3 Homework - Data Journalism and D3
 
+https://zenacar.github.io/D3-Challenge/
+
 ![Newsroom](https://media.giphy.com/media/v2xIous7mnEYg/giphy.gif)
 
 ## Background
