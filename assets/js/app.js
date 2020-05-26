@@ -171,20 +171,11 @@ function updateToolTip(chosenXAxis, chosenYAxis, circlesGroup) {
     hwData.forEach(function(data) {
         data.id = +data.id;
         data.poverty = +data.poverty;
-        data.povertyMoe = +data.povertyMoe;
         data.age = +data.age;
-        data.ageMoe = +data.ageMoe;
         data.income = +data.income;
-        data.incomeMoe = +data.incomeMoe;
         data.healthcare = +data.healthcare;
-        data.healthcareLow = +data.healthcareLow;
-        data.healthcareHigh = +data.healthcareHigh;
         data.obesity = +data.obesity;
-        data.obesityLow = +data.obesityLow;
-        data.obesityHigh = +data.obesityHigh;
         data.smokes = +data.smokes;
-        data.smokesLow = +data.smokesLow;
-        data.smokesHigh = +data.smokesHigh;
     });
 
     // xLinearScale function above csv import
@@ -298,7 +289,7 @@ function updateToolTip(chosenXAxis, chosenYAxis, circlesGroup) {
                 // replaces chosenXAxis with value
                 chosenXAxis = xValue;
 
-                // console.log(chosenXAxis)
+                console.log(chosenXAxis)
 
                 // functions here found above csv import
                 // updates x scale for new data
@@ -360,7 +351,7 @@ function updateToolTip(chosenXAxis, chosenYAxis, circlesGroup) {
                 // replaces chosenXAxis with value
                 chosenYAxis = yValue;
 
-                // console.log(chosenYAxis)
+                console.log(chosenYAxis)
 
                 // functions here found above csv import
                 // updates x scale for new data
