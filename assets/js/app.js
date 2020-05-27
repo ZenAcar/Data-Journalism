@@ -32,8 +32,8 @@ var chosenYAxis = "healthcare";
 function xScale(hwData, chosenXAxis) {
     // create scales
     var xLinearScale = d3.scaleLinear()
-        .domain([d3.min(hwData, d => d[chosenXAxis] - 1),
-            d3.max(hwData, d => d[chosenXAxis] + 2)
+        .domain([d3.min(hwData, d => d[chosenXAxis] * 0.8),
+            d3.max(hwData, d => d[chosenXAxis] * 1.2)
         ])
         .range([0, width]);
 
@@ -45,8 +45,8 @@ function xScale(hwData, chosenXAxis) {
 function yScale(hwData, chosenYAxis) {
     // create scales
     var yLinearScale = d3.scaleLinear()
-        .domain([d3.min(hwData, d => d[chosenYAxis] - 4),
-            d3.max(hwData, d => d[chosenYAxis] + 10)
+        .domain([d3.min(hwData, d => d[chosenYAxis] * 0.7),
+            d3.max(hwData, d => d[chosenYAxis])
         ])
         .range([height, 0]);
 
@@ -260,7 +260,7 @@ function updateToolTip(chosenXAxis, chosenYAxis, circlesGroup) {
         .attr("x", 0 - (height / 2))
         .attr("value", "healthcare") // value to grab for event listener
         .classed("active", true)
-        .text("Lack Healthcare (%)");
+        .text("Lacks Healthcare (%)");
 
     var smokesLabel = yLabelsGroup.append("text")
         .attr("y", 0 - margin.left + 40)
