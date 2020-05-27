@@ -46,7 +46,7 @@ function yScale(hwData, chosenYAxis) {
     // create scales
     var yLinearScale = d3.scaleLinear()
         .domain([d3.min(hwData, d => d[chosenYAxis] * 0.7),
-            d3.max(hwData, d => d[chosenYAxis])
+            d3.max(hwData, d => d[chosenYAxis] * 1.2)
         ])
         .range([height, 0]);
 
@@ -112,7 +112,7 @@ function renderYCircleText(circlesText, newYScale, chosenYAxis) {
 
     circlesText.transition()
         .duration(1000)
-        .attr("y", d => newYScale(d[chosenYAxis]) + 4);
+        .attr("y", d => newYScale(d[chosenYAxis]));
 
     return circlesText;
 }
